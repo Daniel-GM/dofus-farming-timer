@@ -1,0 +1,10 @@
+{
+  "appId": "com.example.RelogioFarm",
+  "productName": "RelogioFarm",
+  "directories": {
+    "output": "dist"
+  },
+  "win": {
+    "target": "portable"
+  }
+}
