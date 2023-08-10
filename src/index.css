@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-app-region: drag;
+  background-color: transparent;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  color: green;
+  user-select: none;
+  z-index: 999;
+}
+
+.back, #close, .save-timer {
+  padding: 5px;
+  font-size: .8em;
+  color: red;
+  -webkit-app-region: no-drag;
+}
+
+#close:hover, .back:hover {
+  color: grey;
+}
+
+#timer1, 
+#timer2, 
+#timer3, 
+#timer4, 
+.save-timer {
+  display: none;
+}
+
+#btn1, #btn2, #btn3, #btn4 {
+  width: 80px;
+  height: 20px;
+  margin-bottom: 5px;
+  -webkit-app-region: no-drag;
+}
+
+#botoes-pos {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+#reset-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.display {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+#close-div {
+  display: flex;
+  justify-content: flex-end
+}
