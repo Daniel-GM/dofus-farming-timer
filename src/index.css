@@ -11,17 +11,23 @@ body {
   justify-content: space-between;
   color: green;
   user-select: none;
-  z-index: 999;
+  flex-direction: column-reverse;
 }
 
-.back, #close, .save-timer {
+.back, 
+#close,
+#config,
+.save-timer,
+#config-div {
   padding: 5px;
-  font-size: .8em;
+  font-size: 1em;
   color: red;
   -webkit-app-region: no-drag;
 }
 
-#close:hover, .back:hover {
+#close:hover,
+#config:hover,
+.back:hover {
   color: grey;
 }
 
@@ -33,7 +39,10 @@ body {
   display: none;
 }
 
-#btn1, #btn2, #btn3, #btn4 {
+#btn1, 
+#btn2, 
+#btn3, 
+#btn4 {
   width: 80px;
   height: 20px;
   margin-bottom: 5px;
@@ -57,7 +66,7 @@ body {
 
 .display {
   display: flex; 
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -68,10 +77,22 @@ body {
 
 #content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 #close-div {
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-start;
+}
+
+#div-timer-1,
+#div-timer-2, 
+#div-timer-3, 
+#div-timer-4 {
+  display: none;
+}
+
+#config-div {
+  
 }

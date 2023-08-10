@@ -21,7 +21,49 @@ const spawn2 = document.getElementById("spawn2")
 const spawn3 = document.getElementById("spawn3")
 const spawn4 = document.getElementById("spawn4")
 
+const viewPos1 = document.getElementById("view-pos-1")
+const viewPos2 = document.getElementById("view-pos-2")
+const viewPos3 = document.getElementById("view-pos-3")
+const viewPos4 = document.getElementById("view-pos-4")
+
+const divTimer1 = document.getElementById("div-timer-1")
+const divTimer2 = document.getElementById("div-timer-2")
+const divTimer3 = document.getElementById("div-timer-3")
+const divTimer4 = document.getElementById("div-timer-4")
+
+const configDiv = document.getElementById("config-div")
+const config = document.getElementById("config")
+
 let segundosStart = {}
+
+function toggleElement(checkbox, element) {
+  console.log(checkbox.style.display)
+  if (checkbox.checked) {
+    element.style.display = "flex"
+  } else if (checkbox.style.display === "none") {
+    checkbox.style.display = "block"
+  } else {
+    element.style.display = "none"
+  }
+}
+
+toggleElement(viewPos1, divTimer1)
+
+config.addEventListener("click", () => {
+  toggleElement(configDiv, configDiv)
+})
+viewPos1.addEventListener("change", () => {
+  toggleElement(viewPos1, divTimer1)
+})
+viewPos2.addEventListener("change", () => {
+  toggleElement(viewPos2, divTimer2)
+})
+viewPos3.addEventListener("change", () => {
+  toggleElement(viewPos3, divTimer3)
+})
+viewPos4.addEventListener("change", () => {
+  toggleElement(viewPos4, divTimer4)
+})
 
 function addResetTimer(back, timer, btn, spawn) {
   back.addEventListener("click", () => {
@@ -81,8 +123,6 @@ function updateTimer(timer) {
   }
 
   const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
-  
-  console.log(segundosStart[timer.id])
   timer.textContent = formattedTime
 }
 

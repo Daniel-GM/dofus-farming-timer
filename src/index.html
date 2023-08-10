@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Timer</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
-
-<body>
-  <div id="main">
-    <div id="content">
-      <div id="reset-div">
-        <h1 id="back1" class="back">reset 1</h1>
-        <h1 id="back3" class="back">reset 3</h1>
-      </div>
-
-      <div id="botoes-pos">
-        <div class="display">
+  <body>
+    <div id="main">
+      <div id="content">
+        <!-- 1 -->
+        <div id="div-timer-1" class="display">
+          <h1 id="back1" class="back">reset 1</h1>
           <button id="btn1">pos 1</button>
-        </div>
-        <div class="display">
           <h1 id="timer1"></h1>
           <h1 id="spawn1" class="save-timer"></h1>
         </div>
 
-        <div class="display">
+        <!-- 2 -->
+        <div id="div-timer-2" class="display">
+          <h1 id="back2" class="back">reset 2</h1>
           <button id="btn2">pos 2</button>
-        </div>
-        <div class="display">
           <h1 id="timer2"></h1>
           <h1 id="spawn2" class="save-timer"></h1>
         </div>
 
-        <button id="btn3">pos 3</button>
-        <div class="display">
+        <!-- 3 -->
+        <div id="div-timer-3" class="display">
+          <h1 id="back3" class="back">reset 3</h1>
+          <button id="btn3">pos 3</button>
           <h1 id="timer3"></h1>
           <h1 id="spawn3" class="save-timer"></h1>
         </div>
 
-        <button id="btn4">pos 4</button>
-        <div class="display">
+        <!-- 4 -->
+        <div id="div-timer-4" class="display">
+          <h1 id="back4" class="back">reset 4</h1>
+          <button id="btn4">pos 4</button>
           <h1 id="timer4"></h1>
           <h1 id="spawn4" class="save-timer"></h1>
         </div>
       </div>
+    </div>
 
-      <div id="reset-div">
-        <h1 id="back2" class="back">reset 2</h1>
-        <h1 id="back4" class="back">reset 4</h1>
+    <div id="config-div" style="display: none;">
+      <div class="config">
+        <input type="checkbox" name="view" id="view-pos-1" checked>
+        <label for="view-pos-1">pos 1</label>
+        <input type="checkbox" name="view" id="view-pos-2">
+        <label for="view-pos-1">pos 2</label>
+      </div>
+      <div class="config">
+        <input type="checkbox" name="view" id="view-pos-3">
+        <label for="view-pos-1">pos 3</label>
+        <input type="checkbox" name="view" id="view-pos-4">
+        <label for="view-pos-1">pos 4</label>
       </div>
     </div>
+
     <div id="close-div">
       <p id="close">&#10006;</p>
+      <p id="config">&#9881;</p>
     </div>
-  </div>
 
-  <script src="preload.js"></script>
-  <script src="renderer.js"></script>
-</body>
-
+    <script src="preload.js"></script>
+    <script src="renderer.js" defer></script>
+  </body>
 </html>
