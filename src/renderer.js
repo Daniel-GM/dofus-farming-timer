@@ -131,7 +131,7 @@ setInterval(() => {
   updateTimer(timer2)
   updateTimer(timer3)
   updateTimer(timer4)
-}, 10)
+}, 1000)
 
 setInterval(() => {
   Object.keys(segundosStart).forEach(key => {

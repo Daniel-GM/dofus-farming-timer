@@ -12,8 +12,8 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
-    width: 180,
-    maxWidth: 180, minWidth: 180,
+    width: 200,
+    maxWidth: 200, minWidth: 200,
     height: 230,
     maxHeight: 230, minHeight: 230,
 
@@ -26,7 +26,7 @@ const createWindow = () => {
     alwaysOnTop: true,
   })
   
-  mainWindow.webContents.openDevTools({ mode: 'detach' })
+  // mainWindow.webContents.openDevTools({ mode: 'detach' })
   mainWindow.loadFile(path.join(__dirname, 'index.html'))
 }
 
