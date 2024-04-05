@@ -26,7 +26,7 @@ const createWindow = () => {
     alwaysOnTop: true,
   })
   
-  // mainWindow.webContents.openDevTools({ mode: 'detach' })
+  mainWindow.webContents.openDevTools({ mode: 'detach' })
   mainWindow.loadFile(path.join(__dirname, 'index.html'))
 }
 

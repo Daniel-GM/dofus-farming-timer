@@ -155,3 +155,18 @@ setInterval(() => {
     }
   })
 }, 60000)
+
+function tradeBackground() {
+  const background = document.querySelector("body")
+  const style = background.style
+
+  console.log(style.backgroundColor)
+  
+  if(style.backgroundColor == '') {
+    style.backgroundColor = '#000'
+  } else if(style.backgroundColor == 'rgb(0, 0, 0)') {
+    style.backgroundColor = '#fff'
+  } else if(style.backgroundColor == 'rgb(255, 255, 255)') {
+    style.backgroundColor = ''
+  } 
+}
